@@ -1,0 +1,32 @@
+// comment
+// labels:
+%%,yes,no
+// attributes:
+##,Alternate,Yes,No
+##,Bar,Yes,No
+##,Fri/Sat,Yes,No
+##,Hungry,Yes,No
+##,Patrons,None,Some,Full
+##,Price,low,med,high
+##,Raining,Yes,No
+##,Reservation,Yes,No
+##,Type,French,Thai,Burger,Italian
+##,WaitTime,0-10,10-30,30-60,>60
+// instances:
+yes,Yes,No,No,Yes,Some,high,No,Yes,French,0-10
+no,Yes,No,No,Yes,Full,low,No,No,Thai,30-60
+yes,No,Yes,No,No,Some,low,No,No,Burger,0-10
+yes,Yes,No,Yes,Yes,Full,low,Yes,No,Thai,10-30
+no,Yes,No,Yes,No,Full,high,No,Yes,French,>60
+yes,No,Yes,No,Yes,Some,med,Yes,Yes,Italian,0-10
+no,No,Yes,No,No,None,low,Yes,No,Burger,0-10
+yes,No,No,No,Yes,Some,med,Yes,Yes,Thai,0-10
+no,No,Yes,Yes,No,Full,low,Yes,No,Burger,>60
+no,Yes,Yes,Yes,Yes,Full,high,No,Yes,Italian,10-30
+no,No,No,No,No,None,low,No,No,Thai,0-10
+yes,Yes,Yes,Yes,Yes,Full,low,No,No,Burger,30-60
+yes,Yes,No,No,Yes,Full,low,No,No,Thai,30-60
+yes,Yes,No,No,Yes,Full,low,No,No,Thai,30-60
+yes,Yes,No,No,Yes,Full,low,No,No,Thai,30-60
+yes,Yes,No,No,Yes,Full,low,No,No,Thai,30-60
+yes,Yes,No,No,Yes,Full,low,No,No,Thai,30-60
