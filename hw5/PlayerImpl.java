@@ -6,6 +6,7 @@ import java.util.Random;
  * @author Matthew Klebenow
  * CSL: klebenow
  * CS 540: Section 1
+ * December 13, 2012
  */
 public class PlayerImpl extends Player {
 	private Color color;
@@ -39,7 +40,8 @@ public class PlayerImpl extends Player {
 	                // initialize successor GameState state
 	                GameState state = makeMove(board, p, this.color);
 	                // find maximum score possible
-	                double score = max_value(state, -Double.MAX_VALUE, Double.MAX_VALUE, depth);
+	                double score = max_value(state, 
+	                        -Double.MAX_VALUE, Double.MAX_VALUE, depth);
 	                // check if beats bestScoreSoFar
 	                if(score > this.bestScoreSoFar){
 	                    // better score
@@ -63,7 +65,8 @@ public class PlayerImpl extends Player {
 	                // initialize successor GameState state
 	                GameState state = makeMove(board, p, this.color);
 	                // find minimum score possible
-	                double score = min_value(state, -Double.MAX_VALUE, Double.MAX_VALUE, depth);
+	                double score = min_value(state, 
+	                        -Double.MAX_VALUE, Double.MAX_VALUE, depth);
 	                // check if beats bestScoreSoFar
 	                if(score < this.bestScoreSoFar){
 	                    // better score
@@ -78,7 +81,8 @@ public class PlayerImpl extends Player {
 	}
 	
 	/**
-	 * Returns maximum score possible from state by alpha-beta pruning to depth.
+	 * Returns maximum score possible from state by alpha-beta pruning to 
+	 * depth.
 	 * 
 	 * @param state GameState current state of game
 	 * @param alpha Double alpha value for alpha-beta pruning
@@ -87,7 +91,8 @@ public class PlayerImpl extends Player {
 	 * deepening)
 	 * @return The maximum score possible with the given parameters.
 	 */
-	private double max_value(GameState state, double alpha, double beta, int depth){
+	private double max_value(GameState state, 
+	        double alpha, double beta, int depth){
 	    // visited state
 	    visited(state.getBoard());
 	    // check if state is terminal or depth is zero
@@ -117,7 +122,8 @@ public class PlayerImpl extends Player {
 	}
 	
 	/**
-     * Returns minimum score possible from state by alpha-beta pruning to depth.
+     * Returns minimum score possible from state by alpha-beta pruning to 
+     * depth.
      * 
      * @param state GameState current state of game
      * @param alpha Double alpha value for alpha-beta pruning
@@ -126,7 +132,8 @@ public class PlayerImpl extends Player {
      * deepening)
      * @return The minimum score possible with the given parameters.
      */
-	private double min_value(GameState state, double alpha, double beta, int depth){
+	private double min_value(GameState state, 
+	        double alpha, double beta, int depth){
 	    // visited state
 	    visited(state.getBoard());
 	    // check if state is terminal or depth is zero
